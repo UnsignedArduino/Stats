@@ -1,4 +1,4 @@
-//% color="#AA278D"
+//% color="#AA278D" icon="\uf205"
 namespace stats {
     /**
      * Toggle stats being on or off. 
@@ -20,5 +20,13 @@ namespace stats {
     //% weight=90
     export function setStat(str: string) {
         control.EventContext.onStats(str);
+    }
+    /**
+     * Returns if stats are on or not as a boolean.
+     */
+    //% block="if stats on"
+    //% weight=80
+    export function ifStats() {
+        return game.stats
     }
 }
